@@ -1,0 +1,58 @@
+{   "name":         "tower-strike"
+  , "title":        "A game where the goal is to kill the enemies by using a tower"
+  , "description":  "Simulate a game where the goal is to kill the enemies by using a tower."
+  , "version":      "0.0.1"
+  , "author": {
+        "name":  "Baltrushaitis Tomas"
+      , "email": "tbaltrushaitis@gmail.com"
+      , "url":   "https://github.com/tbaltrushaitis"
+    }
+  , "license":  "MIT"
+  , "private":  true
+  , "homepage": ""
+  , "website":  ""
+  , "readmeFilename":   "README.md"
+  , "engines": {
+        "node": "#0.12.14"
+      , "npm":  "#2.15.1"
+    }
+  , "main":     "index.js"
+  , "scripts": {
+        "start":    "node index.js"
+      , "dev":      "gulp"
+    }
+  , "repository": {
+        "type": "git"
+      , "url":  "git+https://github.com/tbaltrushaitis/tower-strike"
+    }
+  , "keywords": [
+        "game"
+      , "tower"
+      , "simulator"
+    ]
+  , "dependencies": {
+        "chance":   "^1.0.9"
+      , "lodash":   "^4.17.4"
+      , "mocha":    "^3.4.2"
+      , "should":   "^11.2.1"
+      , "winston":  "^2.3.1"
+    }
+  , "devDependencies": {
+        "gulp":             "^3.9.1"
+      , "gulp-exec":        "^2.1.3"
+      , "gulp-jscs":        "^4.0.0"
+      , "gulp-jshint":      "^2.0.4"
+      , "gulp-sequence":    "^0.4.6"
+      , "jshint":           "^2.9.4"
+      , "jshint-stylish":   "^2.2.1"
+    }
+  , "options":  {
+        "files": {
+            "input":    "input-lost.txt"
+          , "params": {
+                "encoding": "utf8"
+              , "flag":     "r"
+            }
+        }
+    }
+}
