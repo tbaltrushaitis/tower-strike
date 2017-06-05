@@ -1,4 +1,4 @@
-/*  game.js  */
+/*  modules/game.js  */
 
 /*!
  * Module:  Game
@@ -15,8 +15,6 @@
      * @private
      */
 
-    var EventEmitter    =   require('events').EventEmitter;
-
     var _       =   require('lodash');
     var Chance  =   require('chance').Chance(Math.random);
 
@@ -29,9 +27,6 @@
      */
 
     var Game    =   function Game (opts) {
-
-        EventEmitter.call(this);
-
         var self    =   this;
         var defs    =   {
                 id:         Chance.hash()
@@ -40,10 +35,8 @@
                 , Tower:    {}
                 , Turn:     0
             };
-        _.extend(self, true, defs, opts || {});
 
-        //  INHERIT EventEmitter
-        // inherits(self, EventEmitter);
+        _.extend(self, true, defs, opts || {});
     };
 
     /**
@@ -61,13 +54,13 @@
 
     //  Setup
     Game.prototype.setup    =   function (lo) {
-        var self = this;
+        var self    =   this;
         _.extend(self, true, self.defs);
 
         var towerFireRange  =   parseInt(lo[0]);
         self.Tower  =   new Tower({
                             fireRange:  towerFireRange
-                            , id:       Chance.guid()
+                          , id:         Chance.guid()
                         });
 
         var listUnits   =   _.drop(lo);
@@ -75,10 +68,10 @@
             var botData =   sInput.split(' ');
             var botOpts =   {
                     id:             Chance.guid()
-                    , name:         botData[0]
-                    , distInitial:  parseInt(botData[1])
-                    , distCurrent:  parseInt(botData[1])
-                    , speed:        parseInt(botData[2])
+                  , name:           botData[0]
+                  , distInitial:    parseInt(botData[1])
+                  , distCurrent:    parseInt(botData[1])
+                  , speed:          parseInt(botData[2])
                 };
             var oUnit    =   new Unit(_.cloneDeep(botOpts));
 
@@ -91,25 +84,30 @@
 
     //  Play Round
     Game.prototype.playRound    =   function () {
-        var self = this;
+        var self    =   this;
         self.shot();
         self.moveEnemies();
         return self;
     };
 
     //  Tower fire one time
-    Game.prototype.shot    =   function () {
+    Game.prototype.shot =   function () {
         var self    =   this;
 
+        //  Sort enemies list by distance to Tower (ascending) AND speed (descending)
+        //  this allow to kill enemies in fast and secure way
         var Enemies =   _.sortBy(self.getEnemies(), ['distCurrent', function (o) {
                                 return -1 * o.speed;
                             }]);
 
+        //  Check each enemy unit distance and kill the nearest
         _.each(Enemies, function (oEnemy) {
             if (oEnemy.distCurrent <= self.Tower.fireRange) {
                 oEnemy.killed   =   true;
                 var Msg =   '[Turn ' + self.Turn + ']:\t' + 'Kill ' + oEnemy.name + ' at distance = [' + oEnemy.distCurrent + 'm' + ']';
                 self.notify(Msg);
+
+                //  Exit loop
                 return false;
             }
         });
@@ -133,22 +131,27 @@
         return self;
     };
 
-    //  Check if game is over
+    //  Check if game can be finished and set the result
     Game.prototype.checkState    =   function () {
         var self    =   this;
 
-        var cntActiveEnemies    =   _.filter(self.Enemies, {killed: false});
+        //  Check if there are "alive" enemies exists
+        var cntActiveEnemies    =   _.filter(self.Enemies, {killed: false}).length;
         if (cntActiveEnemies === 0) {
             self.Result =   'WIN';
         }
 
-        _.each(self.Enemies, function (oEnemy) {
-            if (oEnemy.distCurrent === 0) {
-                self.Result =   'DESTROYED' + ' by ' + oEnemy.name;
-                return false;
-            }
-        });
+        //  Check if there is an enemy that reach the Tower
+        if (self.Result === null) {
+            _.each(self.Enemies, function (oEnemy) {
+                if (oEnemy.distCurrent === 0) {
+                    self.Result =   'DESTROYED' + ' by ' + oEnemy.name;
+                    return false;
+                }
+            });
+        }
 
+        //  Print result if game is finished
         if (self.Result) {
             self.logResult();
         }
@@ -158,12 +161,10 @@
     //  Notifier
     Game.prototype.notify  =   function (sText) {
         var self    =   this;
-
-        // return console.log('[' + self.constructor.name + ']' + '[' + self.id + ']' + ':\t', (sText || 'Turn: ' + self.Turn));
         return console.log(sText || 'Turn: ' + self.Turn);
     };
 
-    //  Output game result
+    //  Output game result and scores
     Game.prototype.logResult   =   function () {
         var self    =   this;
         var Msg     =   '[Result]:\t' + 'Tower ' + (self.Result + ' in' || 'played') + ' ' + self.Turn + ' turn(s)';

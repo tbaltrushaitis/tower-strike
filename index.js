@@ -33,14 +33,17 @@
     function start () {
         console.log('\n' + dline + '\t' + 'START' + '\t' + dline + '\n');
 
-        var oGame   =   new Game({id: Chance.guid()});
-
         //  Read the contents of the file "input.txt" into memory.
         var dataInput   =   (fs.readFileSync(pkg.options.files.input, pkg.options.files.params)).trim().split('\n');
 
+        //  Create an instance of game controller
+        var oGame   =   new Game({id: Chance.guid()});
+
+        //  Setup game options and create Tower and enemies objects
         oGame.setup(dataInput);
         oGame.Tower.notify();
 
+        //  Main game loop
         while (oGame.Result === null) {
             oGame.Turn++;
             oGame.playRound()

@@ -1,4 +1,4 @@
-/*  BOF: ROOT/gulpfile.js  */
+/*  BOF: gulpfile.js  */
 
 /*!
  * ./gulpfile.js
@@ -8,17 +8,12 @@
 
 'use strict';
 
-var path            =   require('path');
 var gulp            =   require('gulp');
 var exec            =   require('gulp-exec');
 var jscs            =   require('gulp-jscs');
 var jshint          =   require('gulp-jshint');
 var gulpSequence    =   require('gulp-sequence');
 
-var execOptions     =   {
-    continueOnError:    false
-  , pipeStdout:         false
-};
 var watchOptions  =   {
         ignoreInitial:  false
       , verbose:        true
@@ -33,6 +28,7 @@ var reportOptions   =   {
 gulp.task('lint',   ['jscs', 'jshint']);
 gulp.task('watch',  ['watch:js']);
 
+//  Watch for source code changes
 gulp.task('watch:js', function () {
     var wScripts    =   gulp.watch([
                             '*.js'
@@ -42,13 +38,11 @@ gulp.task('watch:js', function () {
                       , watchOptions
                       , function () {
                             gulpSequence('lint', 'run')();
-                            // gulpSequence('run')();
                         });
     wScripts.on('change', function (event) {
         console.info('SCRIPT ' + event.path + ' was ' + event.type + ', running tasks ... ');
     });
 });
-
 
 //  LINTERS
 gulp.task('jscs', function () {
@@ -80,7 +74,7 @@ gulp.task('run', function () {
 
 });
 
-
+//  DEFAULT TASK
 gulp.task('default', ['watch']);
 
-/*  EOF: ROOT/gulpfile.js  */
+/*  EOF: gulpfile.js  */

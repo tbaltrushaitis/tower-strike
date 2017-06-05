@@ -15,34 +15,22 @@
      * @private
      */
 
-    var EventEmitter    =   require('events').EventEmitter;
-
-    // var util            =   require('util');
-    // var inherits        =   require('util').inherits;
-
-    var _               =   require('lodash');
-    var Chance          =   require('chance').Chance(Math.random);
+    var _       =   require('lodash');
+    var Chance  =   require('chance').Chance(Math.random);
 
     /**
      * CONSTRUCTOR
      * @void
      */
 
-    var Tower =   function Tower (opts) {
-
-        EventEmitter.call(this);
-
-        var self = this;
+    var Tower   =   function Tower (opts) {
+        var self    =   this;
         var defs    =   {
-                        id:         Chance.hash()
-                        , fireRange:  parseInt('0m')
-                    };
+                id:         Chance.hash()
+              , fireRange:  parseInt('0m')
+            };
 
         _.extend(self, true, defs, opts || {});
-
-        //  INHERIT EventEmitter
-        // inherits(self, EventEmitter);
-
     };
 
     /**

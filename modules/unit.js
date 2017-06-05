@@ -15,33 +15,26 @@
      * @private
      */
 
-    var EventEmitter    =   require('events').EventEmitter;
-    var _               =   require('lodash');
-    var Chance          =   require('chance').Chance(Math.random);
+    var _       =   require('lodash');
+    var Chance  =   require('chance').Chance(Math.random);
 
     /**
      * CONSTRUCTOR
      * @void
      */
 
-    var Unit =   function Unit (opts) {
-
-        EventEmitter.call(this);
-
+    var Unit    =   function Unit (opts) {
         var self    =   this;
-        var defs = {
-                id:     Chance.hash()
-                , name:   'Bot-' + Chance.first()
-                , speed:  0
-                , distInitial:    0
-                , distCurrent:    0
-                , killed: false
+        var defs    =   {
+                id:             Chance.hash()
+              , name:           'Bot-' + Chance.first()
+              , speed:          0
+              , distInitial:    0
+              , distCurrent:    0
+              , killed:         false
             };
 
         _.extend(self, true, defs, opts || {});
-
-        //  INHERIT EventEmitter
-        // EventEmitter.call(self, false);
     };
 
     /**
@@ -58,7 +51,7 @@
      */
 
     //  Move
-    Unit.prototype.move     =   function () {
+    Unit.prototype.move =   function () {
         var self    =   this;
         if (!self.killed) {
             var distCur =   self.distCurrent;
@@ -76,8 +69,7 @@
     // Notifier
     Unit.prototype.notify   =   function (sText) {
         var self    =   this;
-        /* return console.log('[' + self.constructor.name + ']' + '[' + self.id + ']' + ':\t', (sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm')); */
-        return console.log('\t', sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm');
+        return console.log('\t', (sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm'));
     };
 
     /**
@@ -88,3 +80,4 @@
     module.exports  =   Unit;
 
 }).call(this);
+
