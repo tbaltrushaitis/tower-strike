@@ -30,10 +30,10 @@
         var self    =   this;
         var defs    =   {
                 id:         Chance.hash()
-                , Enemies:  []
-                , Result:   null
-                , Tower:    {}
-                , Turn:     0
+              , Enemies:    []
+              , Result:     null
+              , Tower:      {}
+              , Turn:       0
             };
 
         _.extend(self, true, defs, opts || {});
@@ -107,7 +107,7 @@
                 var Msg =   '[Turn ' + self.Turn + ']:\t' + 'Kill ' + oEnemy.name + ' at distance = [' + oEnemy.distCurrent + 'm' + ']';
                 self.notify(Msg);
 
-                //  Exit loop
+                //  Exit loop early
                 return false;
             }
         });
