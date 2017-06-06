@@ -70,21 +70,21 @@ nvm exec 0.12.14 npm start
 
 ### Problem Statement ###
 Program should simulate a game where the goal is to kill the enemies by using a tower.
-Need to kill enemies as faster as possible.
-At each turn, first the tower fire one time then each enemy moves to the tower.
-If an enemy reach the tower, you loose.
+Need to kill enemies as fast as possible.
+At each turn first the tower fires one time then each enemy moves to the tower.
+If an enemy reaches the tower you lose.
 
 ### Input ###
 The first line is the tower's firing range.
 Each next line represents an enemy:
 1. first column - is the enemy name.
-2. second column - is the initial distance to tower.
+2. second column - is the initial distance to the tower.
 3. the last one - is the unit speed.
 
 ### Output ###
  - At each turn program should inform if the tower killed enemy unit.
- - At the end program should inform if the tower WIN or LOSE and the count of played turns.
- - In case of lost, should calculate the minimal tower's firing distance to win the game against same set of enemies.
+ - At the end program should inform if the tower WINS or LOSES and the count of played turns.
+ - In case of lost the program should calculate the minimal tower's firing distance to win the game against same set of enemies.
 
 ### Samples ###
 
@@ -107,7 +107,7 @@ Tower WIN in 6 turn(s)
 
 ### Tasks checklist ###
 
- - [x] Create programmatic simulator for this game that have to be executed on `node.js` **v0.12.14**
+ - [x] Create programmatic simulator for this game that has to be executed on `node.js` **v0.12.14**
  - [x] Feel free to write unit tests
  - [x] NPM available libs are: `lodash`, `winston`, `chance`, `should`, `mocha`
 
