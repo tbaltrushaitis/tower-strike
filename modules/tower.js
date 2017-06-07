@@ -1,8 +1,7 @@
-/*  modules/tower.js  */
-
 /*!
+ * File:    modules/tower.js
  * Module:  Tower
- * Copyright(c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017 Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -49,7 +48,9 @@
     //  Notifier
     Tower.prototype.notify  =   function (sText) {
         var self    =   this;
-        return console.log('[' + self.constructor.name + ']' + ':\t' + (sText || 'Firing range is [' + self.fireRange + 'm]'));
+        return (self.verbose
+                    ?   console.log('[' + self.constructor.name + ']:\t' + (sText || 'Firing range is [' + self.fireRange + 'm]'))
+                    :   true);
     };
 
     /**

@@ -1,8 +1,7 @@
-/*  modules/game.js  */
-
 /*!
+ * File:    modules/game.js
  * Module:  Game
- * Copyright(c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017 Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -31,9 +30,16 @@
         var defs    =   {
                 id:         Chance.hash()
               , Enemies:    []
-              , Result:     null
+              , Result:     {
+                    state:      null
+                  , message:    ''
+                }
               , Tower:      {}
               , Turn:       0
+              , States: [
+                    'WIN'
+                  , 'LOSE'
+                ]
             };
 
         _.extend(self, true, defs, opts || {});
@@ -61,6 +67,7 @@
         self.Tower  =   new Tower({
                             fireRange:  towerFireRange
                           , id:         Chance.guid()
+                          , verbose:    self.verbose
                         });
 
         var listUnits   =   _.drop(lo);
@@ -69,24 +76,27 @@
             var botOpts =   {
                     id:             Chance.guid()
                   , name:           botData[0]
-                  , distInitial:    parseInt(botData[1])
                   , distCurrent:    parseInt(botData[1])
                   , speed:          parseInt(botData[2])
                 };
-            var oUnit    =   new Unit(_.cloneDeep(botOpts));
-
-            // oUnit.notify();
+            var oUnit    =   new Unit(botOpts); //  _.cloneDeep(botOpts)
             self.Enemies.push(oUnit);
         });
 
         return self;
     };
 
+    //  Increment turn counter
+    Game.prototype.nextTurn =   function () {
+        var self    =   this;
+        self.Turn++;
+        return self;
+    };
+
     //  Play Round
     Game.prototype.playRound    =   function () {
         var self    =   this;
-        self.shot();
-        self.moveEnemies();
+        self.shot().moveEnemies();
         return self;
     };
 
@@ -104,7 +114,7 @@
         _.each(Enemies, function (oEnemy) {
             if (oEnemy.distCurrent <= self.Tower.fireRange) {
                 oEnemy.killed   =   true;
-                var Msg =   '[Turn ' + self.Turn + ']:\t' + 'Kill ' + oEnemy.name + ' at distance = [' + oEnemy.distCurrent + 'm' + ']';
+                var Msg =   '[Turn ' + self.Turn + ']:\t' + 'Tower killed [' + oEnemy.name + '] at distance = [' + oEnemy.distCurrent + 'm' + ']';
                 self.notify(Msg);
 
                 //  Exit loop early
@@ -131,29 +141,36 @@
         return self;
     };
 
-    //  Check if game can be finished and set the result
+    //  Check if the game can be finished
     Game.prototype.checkState    =   function () {
         var self    =   this;
 
         //  Check if there are "alive" enemies exists
-        var cntActiveEnemies    =   _.filter(self.Enemies, {killed: false}).length;
-        if (cntActiveEnemies === 0) {
-            self.Result =   'WIN';
+        if (self.getEnemies().length === 0) {
+            self.Result =   {
+                state:      0
+              , message:    'Tower killed ALL enemies in ' + self.Turn + ' turn(s)'
+            }
         }
 
         //  Check if there is an enemy that reach the Tower
-        if (self.Result === null) {
+        if (self.Result.state === null) {
             _.each(self.Enemies, function (oEnemy) {
                 if (oEnemy.distCurrent === 0) {
-                    self.Result =   'DESTROYED' + ' by ' + oEnemy.name;
+                    self.Result =   {
+                        state:      1
+                      , message:    'Tower DESTROYED by [' + oEnemy.name + '] at turn #' + self.Turn
+                    }
+
+                    //  Exit loop early
                     return false;
                 }
             });
         }
 
-        //  Print result if game is finished
-        if (self.Result) {
-            self.logResult();
+        //  Write result message
+        if (self.Result.state !== null) {
+            self.Result.message =   '[You ' + self.States[self.Result.state] + ']:\t' + self.Result.message;
         }
 
     };
@@ -161,14 +178,15 @@
     //  Notifier
     Game.prototype.notify  =   function (sText) {
         var self    =   this;
-        return console.log(sText || 'Turn: ' + self.Turn);
+        return (self.verbose
+                    ?   console.log(sText || 'Turn: ' + self.Turn)
+                    :   true);
     };
 
-    //  Output game result and scores
+    //  Output game result
     Game.prototype.logResult   =   function () {
         var self    =   this;
-        var Msg     =   '[Result]:\t' + 'Tower ' + (self.Result + ' in' || 'played') + ' ' + self.Turn + ' turn(s)';
-        return self.notify(Msg);
+        return self.notify(self.Result.message);
     };
 
     /**

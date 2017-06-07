@@ -1,8 +1,7 @@
-/*  modules/unit.js  */
-
 /*!
+ * File:    modules/unit.js
  * Module:  Unit
- * Copyright(c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017 Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -28,9 +27,8 @@
         var defs    =   {
                 id:             Chance.hash()
               , name:           'Bot-' + Chance.first()
-              , speed:          0
-              , distInitial:    0
               , distCurrent:    0
+              , speed:          0
               , killed:         false
             };
 
@@ -54,12 +52,12 @@
     Unit.prototype.move =   function () {
         var self    =   this;
         if (!self.killed) {
-            var distCur =   self.distCurrent;
-            var distNew =   Math.max(0, self.distCurrent - self.speed);
-            self.distCurrent    =   distNew;
-            if (distCur !== distNew) {
-                var Msg =   'Move ' + self.name + ' ' + '[' + distCur + 'm' + ' --> ' + distNew + 'm' + ']';
-                /* self.notify(Msg); */
+            var currentDist =   self.distCurrent;
+            var newDist =   Math.max(0, currentDist - self.speed);
+            self.distCurrent    =   newDist;
+            if (currentDist !== newDist) {
+                var Msg =   'Move ' + self.speed + 'm ' + '[' + currentDist + 'm' + ' --> ' + newDist + 'm' + ']';
+                self.notify(Msg);
             }
         }
 
@@ -69,7 +67,9 @@
     // Notifier
     Unit.prototype.notify   =   function (sText) {
         var self    =   this;
-        return console.log('\t', (sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm'));
+        return (self.verbose
+                    ?   console.log('\t[' + self.name + ']' + ':\t', (sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm; ' + (self.killed ? 'DEAD' : 'ALIVE')))
+                    :   true);
     };
 
     /**
