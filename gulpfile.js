@@ -1,8 +1,6 @@
-/*  BOF: gulpfile.js  */
-
 /*!
- * ./gulpfile.js
- * Copyright(c) 2017 Baltrushaitis Tomas
+ * File:    gulpfile.js
+ * Copyright (c) 2017 Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -37,7 +35,7 @@ gulp.task('watch:js', function () {
                         ]
                       , watchOptions
                       , function () {
-                            gulpSequence('lint', 'run')();
+                            gulpSequence('run')();
                         });
     wScripts.on('change', function (event) {
         console.info('SCRIPT ' + event.path + ' was ' + event.type + ', running tasks ... ');
