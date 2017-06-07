@@ -82,7 +82,7 @@ Each next line represents an enemy:
 3. the last one - is the unit speed.
 
 ### Output ###
- - At each turn program should inform if the tower killed enemy unit.
+ - At each turn program should inform if the tower killed the enemy unit.
  - At the end program should inform if the tower WINS or LOSES and the count of played turns.
  - In case of lost the program should calculate the minimal tower's firing distance to win the game against same set of enemies.
 
