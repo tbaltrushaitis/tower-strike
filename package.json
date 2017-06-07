@@ -48,7 +48,7 @@
     }
   , "options":  {
         "files": {
-            "input":    "input-lost-001.txt"
+            "input":    "data/input-lost-001.txt"
           , "params": {
                 "encoding": "utf8"
               , "flag":     "r"
