@@ -1,7 +1,7 @@
 {   "name":         "tower-strike"
   , "title":        "A game where the goal is to kill the enemies by using a tower"
   , "description":  "Simulate a game where the goal is to kill the enemies by using a tower."
-  , "version":      "0.0.1"
+  , "version":      "0.0.2"
   , "author": {
         "name":  "Baltrushaitis Tomas"
       , "email": "tbaltrushaitis@gmail.com"
@@ -48,7 +48,7 @@
     }
   , "options":  {
         "files": {
-            "input":    "input-lost.txt"
+            "input":    "input-lost-001.txt"
           , "params": {
                 "encoding": "utf8"
               , "flag":     "r"
