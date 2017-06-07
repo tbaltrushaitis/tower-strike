@@ -1,5 +1,3 @@
-# Tower Strike
-
 ![Tower Strike Logo](logo-tower-strike.png)
 
 A game where the goal is to kill the enemies by using a tower
