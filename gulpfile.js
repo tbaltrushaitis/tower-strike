@@ -86,17 +86,17 @@ gulp.task('jshint', function () {
 
 //  TEST with MOCHA
 gulp.task('mocha', function () {
-    gulp.src('')
-        .pipe(exec('./node_modules/.bin/mocha'))
-        .pipe(exec.reporter(reportOptions));
+    return  gulp.src('')
+                .pipe(exec('node ./node_modules/.bin/mocha'))
+                .pipe(exec.reporter(reportOptions));
 });
 
 
 //  EXECUTE
 gulp.task('run', function () {
-    gulp.src('')
-        .pipe(exec('node index.js'))
-        .pipe(exec.reporter(reportOptions));
+    return  gulp.src('')
+                .pipe(exec('node index.js'))
+                .pipe(exec.reporter(reportOptions));
 });
 
 
