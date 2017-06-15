@@ -72,18 +72,21 @@ $ npm test
 #### List of available reporters ####
 Reporter for tests could be changed in file `test/mocha.opts` by changing the value of `--reporter` parameter.
 Here is the list of possible values for it:
- - spec
+ - base
+ - doc
  - dot
- - nyan
- - tap
+ - html
+ - json-stream
+ - json
  - landing
  - list
- - progress
- - json
- - min
- - doc
  - markdown
- - html
+ - min
+ - nyan
+ - progress
+ - spec
+ - tap
+ - xunit
 
 ### Standard execution ###
 
