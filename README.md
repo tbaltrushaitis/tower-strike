@@ -45,7 +45,13 @@ $ npm i
 --------
 ## Usage ##
 
-### While in development ###
+### Standard execution ###
+
+```bash
+$ nvm exec 0.12.14 npm start
+```
+
+### Development stage ###
 
 ```bash
 $ nvm exec 0.12.14 gulp
@@ -57,7 +63,7 @@ or
 $ nvm exec 0.12.14 npm run dev
 ```
 
-### Running tests ###
+### Testing ###
 
 ```bash
 $ make test
@@ -87,12 +93,6 @@ Here is the list of possible values for it:
  - spec
  - tap
  - xunit
-
-### Standard execution ###
-
-```bash
-$ nvm exec 0.12.14 npm start
-```
 
 --------
 ## Task definition ##
