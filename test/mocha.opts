@@ -1,0 +1,9 @@
+--colors
+--recursive
+--require should
+--require expect
+--ui bdd
+--globals callback*
+--timeout 1000
+--allow-uncaught
+--reporter spec
