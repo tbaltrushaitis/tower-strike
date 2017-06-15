@@ -79,7 +79,7 @@
                   , distCurrent:    parseInt(botData[1])
                   , speed:          parseInt(botData[2])
                 };
-            var oUnit    =   new Unit(botOpts); //  _.cloneDeep(botOpts)
+            var oUnit    =   new Unit(botOpts);         //  _.cloneDeep(botOpts)
             self.Enemies.push(oUnit);
         });
 

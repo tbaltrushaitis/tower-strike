@@ -27,6 +27,7 @@
         var defs    =   {
                 id:         Chance.hash()
               , fireRange:  parseInt('0m')
+              , verbose:    false
             };
 
         _.extend(self, true, defs, opts || {});

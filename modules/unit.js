@@ -64,7 +64,7 @@
         return self;
     };
 
-    // Notifier
+    //  Notifier
     Unit.prototype.notify   =   function (sText) {
         var self    =   this;
         return (self.verbose
