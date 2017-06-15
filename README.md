@@ -57,7 +57,19 @@ or
 $ nvm exec 0.12.14 npm run dev
 ```
 
-### Normal execution ###
+### Running tests ###
+
+```bash
+$ make test
+```
+
+or
+
+```bash
+$ npm test
+```
+
+### Standard execution ###
 
 ```bash
 $ nvm exec 0.12.14 npm start
