@@ -57,7 +57,7 @@
      * @public
      */
 
-    console.info('[Input]:\tType of data extracted from source:', typeof dataInput);
+    //  console.info('[Input]:\tType of data extracted from source:', typeof dataInput);
     var gameEmcee   =   new Emcee ({id: Chance.guid(), verbose: true});
     gameEmcee.runGame(dataInput);
 

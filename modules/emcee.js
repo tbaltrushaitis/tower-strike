@@ -58,14 +58,15 @@
     /*  Gameplay  */
     Emcee.prototype.runGame =   function (Data) {
         var self    =   this;
-        console.log('\n' + dline + '\t' + 'START' + '\t' + dline + '\n');
+        (self.verbose) ? console.log('\n' + dline + '\t' + 'START' + '\t' + dline + '\n') : false;
 
         //  Create an instance of the game controller
-        self.Game   =   new Game({id: Chance.guid(), verbose: true});
+        // self.Game   =   new Game({id: Chance.guid(), verbose: true});
+        self.Game   =   new Game({id: Chance.guid(), verbose: self.verbose});
 
         //  Setup game options and create Tower and enemies objects
         self.Game.setup(Data);
-        self.Game.Tower.notify();
+        (self.verbose) ? self.Game.Tower.notify() : false;
 
         //  Main game loop
         while (self.Game.Result.state === null) {
@@ -73,14 +74,14 @@
                 .playRound()
                 .checkState();
         }
-        self.Game.logResult();
+        (self.verbose) ? self.Game.logResult() : false;
 
         //  Insights
         if (self.Game.Result.state === 1) {
             self.getHint(Data);
         }
 
-        console.log('\n' + dline + '\t' + 'END' + '\t' + dline);
+        (self.verbose) ? console.log('\n' + dline + '\t' + 'END' + '\t' + dline) : false;
         // _(2).times(function () { console.log('\n'); });
 
         return self;
@@ -112,7 +113,9 @@
 
             if (testGame.Result.state === 0) {
                 found   =   true;
-                console.log('[HINT]:\t\tMinimal firing range to win this game is: [' + testGame.Tower.fireRange + 'm]');
+                (self.verbose)
+                    ?   console.log('[HINT]:\t\tMinimal firing range to win this game is: [' + testGame.Tower.fireRange + 'm]')
+                    :   false;
             }
         }
 
