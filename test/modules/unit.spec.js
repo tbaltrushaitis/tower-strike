@@ -41,30 +41,36 @@
 
     describe('Enemy', function () {
 
-        it('Instance created', function () {
+        it('Instance created', function (done) {
             Mod.should.be.an.instanceOf(Object);
+            done();
         });
 
         describe('Have property', function () {
 
-            it('id\t\t(String)', function () {
+            it('id\t\t(String)', function (done) {
                 Mod.should.have.property('id').which.is.a.String();
+                done();
             });
 
-            it('name\t\t(String)', function () {
+            it('name\t\t(String)', function (done) {
                 Mod.should.have.property('name').which.is.a.String();
+                done();
             });
 
-            it('distCurrent\t(Number)', function () {
+            it('distCurrent\t(Number)', function (done) {
                 Mod.should.have.property('distCurrent').which.is.a.Number();
+                done();
             });
 
-            it('speed\t\t(Number)', function () {
+            it('speed\t\t(Number)', function (done) {
                 Mod.should.have.property('speed').which.is.a.Number();
+                done();
             });
 
-            it('killed\t\t(Boolean)', function () {
+            it('killed\t\t(Boolean)', function (done) {
                 Mod.should.have.property('killed').which.is.a.Boolean().and.is.false();
+                done();
             });
 
         });
@@ -72,9 +78,9 @@
         describe('Have method', function () {
 
             _.each(lstMethods, function (m, i) {
-                it(m + '()', function () {
-                    Mod.should.have.property(m);
-                    Mod[m].should.be.Function();
+                it(1 + i + '.\t' + m + '()', function (done) {
+                    Mod.should.have.property(m).which.is.a.Function();
+                    done();
                 });
             });
 
