@@ -1,7 +1,7 @@
 {   "name":         "tower-strike"
   , "title":        "A game where the goal is to kill the enemies by using a tower"
   , "description":  "Simulate a game where the goal is to kill the enemies by using a tower."
-  , "version":      "0.0.2"
+  , "version":      "0.0.3"
   , "author": {
         "name":  "Baltrushaitis Tomas"
       , "email": "tbaltrushaitis@gmail.com"
@@ -10,20 +10,26 @@
   , "license":  "MIT"
   , "private":  true
   , "homepage": ""
+  , "logo":     "https://github.com/tbaltrushaitis/tower-strike/blob/master/logo-tower-strike.png"
   , "website":  ""
   , "readmeFilename":   "README.md"
+  , "repository": {
+        "type": "git"
+      , "url":  "git+https://github.com/tbaltrushaitis/tower-strike.git"
+    }
   , "engines": {
         "node": "#0.12.14"
       , "npm":  "#2.15.1"
     }
   , "main":     "index.js"
+  , "bin": {
+        "mocha":    "./node_modules/.bin/mocha"
+      , "_mocha":   "./node_modules/.bin/_mocha"
+    }
   , "scripts": {
         "start":    "node index.js"
       , "dev":      "gulp"
-    }
-  , "repository": {
-        "type": "git"
-      , "url":  "git+https://github.com/tbaltrushaitis/tower-strike"
+      , "test":     "mocha"
     }
   , "keywords": [
         "game"
@@ -32,6 +38,7 @@
     ]
   , "dependencies": {
         "chance":   "^1.0.9"
+      , "config":   "^1.26.1"
       , "lodash":   "^4.17.4"
       , "mocha":    "^3.4.2"
       , "should":   "^11.2.1"
@@ -46,9 +53,15 @@
       , "jshint":           "^2.9.4"
       , "jshint-stylish":   "^2.2.1"
     }
+  , "disbledDependencies": {
+        "expect":   "^1.20.2"
+    }
   , "options":  {
-        "files": {
-            "input":    "data/input-lost-001.txt"
+        "dataSource":   {
+            "defaults":  {
+                "file": "input-lost-001.txt"
+              , "path": "data"
+            }
           , "params": {
                 "encoding": "utf8"
               , "flag":     "r"
