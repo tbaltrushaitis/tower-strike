@@ -87,7 +87,7 @@
         describe('Have method', function () {
 
             _.each(lstMethods, function (m, i) {
-                it(1 + i + '.\t' + m + '()', function (done) {
+                it(1 + i + '. ' + m + '()', function (done) {
                     Mod.should.have.property(m).which.is.a.Function();
                     done();
                 });
