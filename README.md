@@ -56,9 +56,7 @@ $ nvm exec 0.12.14 npm start
 ```bash
 $ nvm exec 0.12.14 gulp
 ```
-
 or
-
 ```bash
 $ nvm exec 0.12.14 npm run dev
 ```
@@ -68,9 +66,7 @@ $ nvm exec 0.12.14 npm run dev
 ```bash
 $ make test
 ```
-
 or
-
 ```bash
 $ npm test
 ```
