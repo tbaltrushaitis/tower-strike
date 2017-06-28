@@ -134,7 +134,7 @@ Tower WIN in 6 turn(s)
 
  - [x] Create programmatic simulator for this game that has to be executed on **node.js@0.12.14**
  - [x] Feel free to write unit tests
- - [x] NPM available libs are: `lodash`, `winston`, `chance`, `should`, `mocha`
+ - [x] NPM available libs are: [lodash](https://lodash.com/), [winston](https://www.npmjs.com/package/winston), [chance](http://chancejs.com/), [should](http://shouldjs.github.io/), [mocha](http://mochajs.org/)
 
 --------
 
