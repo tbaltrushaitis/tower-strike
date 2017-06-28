@@ -1,4 +1,4 @@
-![Tower Strike Logo](logo-tower-strike.png)
+![Tower Strike Logo](../logo-tower-strike.png)
 
 Simulate a game where the goal is to kill the enemies by using a tower.
 
