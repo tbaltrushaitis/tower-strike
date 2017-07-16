@@ -6,7 +6,7 @@ Simulate a game where the goal is to kill the enemies by using a tower.
 
 ## Setup environment ##
 
-### Install NVM ###
+#### Install NVM ####
 
 To install or update nvm, you can use the install script using cURL:
 
@@ -20,7 +20,7 @@ or Wget:
 $ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ```
 
-### Install node.js v0.12.14 ###
+#### Install node.js v0.12.14 ####
 
 ```bash
 $ nvm install 0.12.14
@@ -29,13 +29,13 @@ $ nvm install 0.12.14
 --------
 ## Deploy ##
 
-### Get sources ###
+#### Get sources ####
 
 ```bash
 $ git clone https://github.com/tbaltrushaitis/tower-strike.git tower-strike
 ```
 
-### Install dependencies ###
+#### Install dependencies ####
 
 ```bash
 $ cd tower-strike
@@ -45,35 +45,29 @@ $ npm i
 --------
 ## Usage ##
 
-### Standard execution ###
+#### Standard execution ####
 
 ```bash
 $ nvm exec 0.12.14 npm start
 ```
 
-### Development stage ###
+#### Development stage ####
 
 ```bash
 $ nvm exec 0.12.14 gulp
-```
-or
-```bash
 $ nvm exec 0.12.14 npm run dev
 ```
 
-### Testing ###
+#### Testing ####
 
 ```bash
 $ make test
-```
-or
-```bash
 $ npm test
 ```
 
 #### List of available reporters ####
-Reporter for tests could be changed in file `test/mocha.opts` by changing the value of `--reporter` parameter.
-Here is the list of possible values for it:
+Reporter for tests could be changed in ![mocha options file](test/mocha.opts) by changing the value of `--reporter` parameter.
+Here is the list of possible values for the option:
  - base
  - doc
  - dot
@@ -147,3 +141,4 @@ Tower WIN in 6 turn(s)
  - [Docker / Cross-host linking containers](https://docs.docker.com/engine/admin/ambassador_pattern_linking.md)
 
 --------
+
