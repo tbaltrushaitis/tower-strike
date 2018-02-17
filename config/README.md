@@ -1,10 +1,10 @@
-![Tower Strike Logo](../logo-tower-strike.png)
+![Tower Strike Logo](../assets/img/logo-tower-strike.png)
 
 Simulate a game where the goal is to kill the enemies by using a tower.
 
---------
+---
 
-## Config Directory
+## Config Directory ##
 
 Node-config reads configuration files in the ```./config``` directory for the running process, typically the application root.  This can be overridden by setting the ```$NODE_CONFIG_DIR``` environment variable to the directory containing your configuration files.
 
@@ -32,7 +32,7 @@ Files in the config directory are loaded in the following order:
     local-{deployment}-{instance}.EXT
     (Finally, custom environment variables can override all files)
 
-Where 
+Where
 
 * ```EXT``` can be .yml, .yaml, .xml, .coffee, .cson, [.properties](https://github.com/gagle/node-properties), [.json](http://json.org/), [.json5](http://json5.org/), [.hjson](http://laktak.github.io/hjson/) or .js depending on the format you prefer (see below)
 * ```{instance}``` is an optional instance name string for [Multi-Instance Deployments](#multi-instance-deployments)
@@ -53,7 +53,7 @@ The best practice for using `local` files is avoid a global `local.EXT` file tha
 
 ## Default NODE_ENV
 
-If `NODE_ENV` is not set in the environment, a default value of `development` is used. 
+If `NODE_ENV` is not set in the environment, a default value of `development` is used.
 
 ## Arrays are merged by replacement
 
@@ -203,7 +203,7 @@ module.exports = {
 
 In the JavaScript modules you have the option to define a configuration value as function whose resolution
 will be deferred until the final merged configuration structure is built. In the example above, a default subject
-is provided that references another configuration value-- the site title.  Another configuration file may override 
+is provided that references another configuration value-- the site title.  Another configuration file may override
 the site title. Because the resolution of `email.subject` is deferred, it would resolve to refer to the overridden site
 title.
 
@@ -225,7 +225,7 @@ module.exports = {
 You know what you like.  Files ending in ```.coffee``` are loaded and run as a CoffeeScript module.  Example CoffeeScript configuration file:
 
 ```coffee
-module.exports = 
+module.exports =
   # Customer module configs
   Customer:
     dbConfig:
@@ -316,7 +316,7 @@ Files ending in ```.xml``` are parsed in XML format. Example:
 
 The `dependencies` section of your application's `package.json` file must contain x2js in order to read XML configuration files.
 
---------
+---
 
 #### Useful Info ####
 
@@ -326,4 +326,4 @@ The `dependencies` section of your application's `package.json` file must contai
  - [Docker / Linking containers](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks.md)
  - [Docker / Cross-host linking containers](https://docs.docker.com/engine/admin/ambassador_pattern_linking.md)
 
---------
+---
