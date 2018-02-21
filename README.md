@@ -51,7 +51,7 @@ Tower WIN in 6 turn(s)
 
 ---
 
-## Setup ##
+## Prerequisites ##
 
 #### Install NVM ####
 
@@ -73,7 +73,7 @@ $ nvm install 0.12.14
 
 ---
 
-## Deploy ##
+## Setup ##
 
 #### Get sources ####
 
@@ -81,7 +81,7 @@ $ nvm install 0.12.14
 $ git clone https://github.com/tbaltrushaitis/tower-strike.git
 ```
 
-#### Install dependencies ####
+#### Install dependencies and build ####
 
 ```shell
 $ cd tower-strike
@@ -112,26 +112,87 @@ $ make test
 $ npm test
 ```
 
-![Test Results](assets/img/mocha-tests-tower-strike-001.png)
+![Spec Reporter](assets/img/mocha-tests-tower-strike-reporter-spec.png)
 
 #### List of available reporters ####
 Reporter for tests could be changed in [mocha options file](test/mocha.opts) by changing the value of `--reporter` parameter.
 Here is the list of possible values for the option:
- - base
- - doc
- - dot
- - html
- - json-stream
- - json
- - landing
- - list
- - markdown
- - min
- - nyan
- - progress
- - spec
- - tap
- - xunit
+
+
+<details>
+  <summary>doc</summary>
+  <a href="assets/npm-test-reporter-doc.html" target="blank">Example of HTML code generated</a>
+</details>
+
+<details>
+  <summary>dot</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-dot.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>landing</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-landing.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>list</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-list.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>nyan</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-nyan.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>tap</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-tap.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>json</summary>
+  <a href="assets/npm-test-reporter-json.json" target="blank">JSON data</a>
+</details>
+
+<details>
+  <summary>json-stream</summary>
+  <a href="assets/npm-test-reporter-json-stream.txt" target="blank">JSON-stream data</a>
+</details>
+
+<details>
+  <summary>markdown</summary>
+  <a href="assets/npm-test-reporter-markdown.md" target="blank">Markdown file</a>
+</details>
+
+<details>
+  <summary>base</summary>
+</details>
+
+<details>
+  <summary>min</summary>
+</details>
+
+<details>
+  <summary>progress</summary>
+</details>
+
+<details>
+  <summary>html</summary>
+</details>
+
+<details>
+  <summary>xunit</summary>
+</details>
 
 ---
 
