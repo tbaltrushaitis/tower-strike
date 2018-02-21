@@ -112,12 +112,14 @@ $ make test
 $ npm test
 ```
 
-![Spec Reporter](assets/img/mocha-tests-tower-strike-reporter-spec.png)
+<div align="center">
+  <img src="assets/img/mocha-tests-tower-strike-reporter-spec.png" alt="Spec Reporter" max-height="500px" max-width="500px" />
+</div>
 
 #### List of available reporters ####
+
 Reporter for tests could be changed in [mocha options file](test/mocha.opts) by changing the value of `--reporter` parameter.
 Here is the list of possible values for the option:
-
 
 <details>
   <summary>doc</summary>
