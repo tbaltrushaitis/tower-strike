@@ -1,0 +1,704 @@
+{
+  "stats": {
+    "suites": 20,
+    "tests": 49,
+    "passes": 49,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-02-21T05:25:11.978Z",
+    "end": "2018-02-21T05:25:12.899Z",
+    "duration": 921
+  },
+  "tests": [
+    {
+      "title": "EXIST",
+      "fullTitle": "DataSources Directory EXIST",
+      "duration": 18,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "READABLE",
+      "fullTitle": "DataSources Directory READABLE",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "NOT EMPTY",
+      "fullTitle": "DataSources Directory NOT EMPTY",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] got file content",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] should be at least 2 lines of data",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] Processing data New instance of Emcee created",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] Processing data battle finished",
+      "duration": 482,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] got file content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] should be at least 2 lines of data",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] Processing data New instance of Emcee created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] Processing data battle finished",
+      "duration": 250,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] got file content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] should be at least 2 lines of data",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] Processing data New instance of Emcee created",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] Processing data battle finished",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Emcee Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Emcee Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Game\t\t(Object)",
+      "fullTitle": "Emcee Have property Game\t\t(Object)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. runGame()",
+      "fullTitle": "Emcee Have method 1. runGame()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. getHint()",
+      "fullTitle": "Emcee Have method 2. getHint()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Game Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Game Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Enemies\t\t(Array)",
+      "fullTitle": "Game Have property Enemies\t\t(Array)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Result\t\t(Object)",
+      "fullTitle": "Game Have property Result\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Tower\t\t(Object)",
+      "fullTitle": "Game Have property Tower\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Turn\t\t(Number)",
+      "fullTitle": "Game Have property Turn\t\t(Number)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "States\t\t(Object)",
+      "fullTitle": "Game Have property States\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. setup()",
+      "fullTitle": "Game Have method 1. setup()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. nextTurn()",
+      "fullTitle": "Game Have method 2. nextTurn()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "3. playRound()",
+      "fullTitle": "Game Have method 3. playRound()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "4. shot()",
+      "fullTitle": "Game Have method 4. shot()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "5. getEnemies()",
+      "fullTitle": "Game Have method 5. getEnemies()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "6. moveEnemies()",
+      "fullTitle": "Game Have method 6. moveEnemies()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "7. checkState()",
+      "fullTitle": "Game Have method 7. checkState()",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "8. notify()",
+      "fullTitle": "Game Have method 8. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "9. logResult()",
+      "fullTitle": "Game Have method 9. logResult()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Tower Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Tower Have property id\t\t(String)",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "fireRange\t(Number)",
+      "fullTitle": "Tower Have property fireRange\t(Number)",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "verbose\t\t(Boolean)",
+      "fullTitle": "Tower Have property verbose\t\t(Boolean)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. notify()",
+      "fullTitle": "Tower Have method 1. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Enemy Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Enemy Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "name\t\t(String)",
+      "fullTitle": "Enemy Have property name\t\t(String)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "distCurrent\t(Number)",
+      "fullTitle": "Enemy Have property distCurrent\t(Number)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "speed\t\t(Number)",
+      "fullTitle": "Enemy Have property speed\t\t(Number)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "killed\t\t(Boolean)",
+      "fullTitle": "Enemy Have property killed\t\t(Boolean)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. notify()",
+      "fullTitle": "Enemy Have method 1. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. move()",
+      "fullTitle": "Enemy Have method 2. move()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "EXIST",
+      "fullTitle": "DataSources Directory EXIST",
+      "duration": 18,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "READABLE",
+      "fullTitle": "DataSources Directory READABLE",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "NOT EMPTY",
+      "fullTitle": "DataSources Directory NOT EMPTY",
+      "duration": 5,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] got file content",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] should be at least 2 lines of data",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] Processing data New instance of Emcee created",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-001.txt] Processing data battle finished",
+      "duration": 482,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] got file content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] should be at least 2 lines of data",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] Processing data New instance of Emcee created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-lost-002.txt] Processing data battle finished",
+      "duration": 250,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "got file content",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] got file content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be at least 2 lines of data",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] should be at least 2 lines of data",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "New instance of Emcee created",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] Processing data New instance of Emcee created",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "battle finished",
+      "fullTitle": "Battle Simulation Run with [data/input-win-001.txt] Processing data battle finished",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Emcee Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Emcee Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Game\t\t(Object)",
+      "fullTitle": "Emcee Have property Game\t\t(Object)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. runGame()",
+      "fullTitle": "Emcee Have method 1. runGame()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. getHint()",
+      "fullTitle": "Emcee Have method 2. getHint()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Game Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Game Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Enemies\t\t(Array)",
+      "fullTitle": "Game Have property Enemies\t\t(Array)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Result\t\t(Object)",
+      "fullTitle": "Game Have property Result\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Tower\t\t(Object)",
+      "fullTitle": "Game Have property Tower\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Turn\t\t(Number)",
+      "fullTitle": "Game Have property Turn\t\t(Number)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "States\t\t(Object)",
+      "fullTitle": "Game Have property States\t\t(Object)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. setup()",
+      "fullTitle": "Game Have method 1. setup()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. nextTurn()",
+      "fullTitle": "Game Have method 2. nextTurn()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "3. playRound()",
+      "fullTitle": "Game Have method 3. playRound()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "4. shot()",
+      "fullTitle": "Game Have method 4. shot()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "5. getEnemies()",
+      "fullTitle": "Game Have method 5. getEnemies()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "6. moveEnemies()",
+      "fullTitle": "Game Have method 6. moveEnemies()",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "7. checkState()",
+      "fullTitle": "Game Have method 7. checkState()",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "8. notify()",
+      "fullTitle": "Game Have method 8. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "9. logResult()",
+      "fullTitle": "Game Have method 9. logResult()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Tower Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Tower Have property id\t\t(String)",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "fireRange\t(Number)",
+      "fullTitle": "Tower Have property fireRange\t(Number)",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "verbose\t\t(Boolean)",
+      "fullTitle": "Tower Have property verbose\t\t(Boolean)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. notify()",
+      "fullTitle": "Tower Have method 1. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Instance created",
+      "fullTitle": "Enemy Instance created",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "id\t\t(String)",
+      "fullTitle": "Enemy Have property id\t\t(String)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "name\t\t(String)",
+      "fullTitle": "Enemy Have property name\t\t(String)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "distCurrent\t(Number)",
+      "fullTitle": "Enemy Have property distCurrent\t(Number)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "speed\t\t(Number)",
+      "fullTitle": "Enemy Have property speed\t\t(Number)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "killed\t\t(Boolean)",
+      "fullTitle": "Enemy Have property killed\t\t(Boolean)",
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "1. notify()",
+      "fullTitle": "Enemy Have method 1. notify()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "2. move()",
+      "fullTitle": "Enemy Have method 2. move()",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
