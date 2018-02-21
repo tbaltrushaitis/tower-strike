@@ -1,90 +1,9 @@
-![Tower Strike Logo](logo-tower-strike.png)
+![Tower Strike Logo](assets/img/logo-tower-strike.png)
 
 Simulate a game where the goal is to kill the enemies by using a tower.
 
---------
+---
 
-## Setup environment ##
-
-#### Install NVM ####
-
-To install or update nvm, you can use the install script using cURL:
-
-```bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-```
-
-or Wget:
-
-```bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-```
-
-#### Install node.js v0.12.14 ####
-
-```bash
-$ nvm install 0.12.14
-```
-
---------
-## Deploy ##
-
-#### Get sources ####
-
-```bash
-$ git clone https://github.com/tbaltrushaitis/tower-strike.git tower-strike
-```
-
-#### Install dependencies ####
-
-```bash
-$ cd tower-strike
-$ npm i
-```
-
---------
-## Usage ##
-
-#### Standard execution ####
-
-```bash
-$ nvm exec 0.12.14 npm start
-```
-
-#### Development stage ####
-
-```bash
-$ nvm exec 0.12.14 gulp
-$ nvm exec 0.12.14 npm run dev
-```
-
-#### Testing ####
-
-```bash
-$ make test
-$ npm test
-```
-
-#### List of available reporters ####
-Reporter for tests could be changed in ![mocha options file](test/mocha.opts) by changing the value of `--reporter` parameter.
-Here is the list of possible values for the option:
- - base
- - doc
- - dot
- - html
- - json-stream
- - json
- - landing
- - list
- - markdown
- - min
- - nyan
- - progress
- - spec
- - tap
- - xunit
-
---------
 ## Task definition ##
 
 ### Problem Statement ###
@@ -130,7 +49,154 @@ Tower WIN in 6 turn(s)
  - [x] Feel free to write unit tests
  - [x] NPM available libs are: [lodash](https://lodash.com/), [winston](https://www.npmjs.com/package/winston), [chance](http://chancejs.com/), [should](http://shouldjs.github.io/), [mocha](http://mochajs.org/)
 
---------
+---
+
+## Prerequisites ##
+
+#### Install NVM ####
+
+To install or update nvm, you can use the install script using cURL:
+
+```shell
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+```
+or Wget:
+```shell
+$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+```
+
+#### Install node.js v0.12.14 ####
+
+```shell
+$ nvm install 0.12.14
+```
+
+---
+
+## Setup ##
+
+#### Get sources ####
+
+```shell
+$ git clone https://github.com/tbaltrushaitis/tower-strike.git
+```
+
+#### Install dependencies and build ####
+
+```shell
+$ cd tower-strike
+$ npm i
+```
+
+---
+
+## Usage ##
+
+#### Standard execution ####
+
+```shell
+$ nvm exec 0.12.14 npm start
+```
+
+#### Development stage ####
+
+```shell
+$ nvm exec 0.12.14 gulp
+$ nvm exec 0.12.14 npm run dev
+```
+
+#### Testing ####
+
+```shell
+$ make test
+$ npm test
+```
+
+<div align="center">
+  <img src="assets/img/mocha-tests-tower-strike-reporter-spec.png" alt="Spec Reporter" max-height="500px" max-width="500px" />
+</div>
+
+#### List of available reporters ####
+
+Reporter for tests could be changed in [mocha options file](test/mocha.opts) by changing the value of `--reporter` parameter.
+Here is the list of possible values for the option:
+
+<details>
+  <summary>doc</summary>
+  <a href="assets/npm-test-reporter-doc.html" target="blank">Example of HTML code generated</a>
+</details>
+
+<details>
+  <summary>dot</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-dot.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>landing</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-landing.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>list</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-list.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>nyan</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-nyan.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>tap</summary>
+  <div align="center">
+    <img src="assets/img/mocha-tests-tower-strike-reporter-tap.png" max-height="500px" max-width="500px" />
+  </div>
+</details>
+
+<details>
+  <summary>json</summary>
+  <a href="assets/npm-test-reporter-json.json" target="blank">JSON data</a>
+</details>
+
+<details>
+  <summary>json-stream</summary>
+  <a href="assets/npm-test-reporter-json-stream.txt" target="blank">JSON-stream data</a>
+</details>
+
+<details>
+  <summary>markdown</summary>
+  <a href="assets/npm-test-reporter-markdown.md" target="blank">Markdown file</a>
+</details>
+
+<details>
+  <summary>base</summary>
+</details>
+
+<details>
+  <summary>min</summary>
+</details>
+
+<details>
+  <summary>progress</summary>
+</details>
+
+<details>
+  <summary>html</summary>
+</details>
+
+<details>
+  <summary>xunit</summary>
+</details>
+
+---
 
 #### Useful Info ####
 
@@ -140,5 +206,6 @@ Tower WIN in 6 turn(s)
  - [Docker / Linking containers](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks.md)
  - [Docker / Cross-host linking containers](https://docs.docker.com/engine/admin/ambassador_pattern_linking.md)
 
---------
+---
 
+:scorpius:

@@ -149,6 +149,7 @@ Instance created.
 
 ```js
 Mod.should.be.an.instanceOf(Object);
+done();
 ```
 
 <a name="emcee-have-property"></a>
@@ -157,28 +158,30 @@ id              (String).
 
 ```js
 Mod.should.have.property('id').which.is.a.String();
+done();
 ```
 
 Game            (Object).
 
 ```js
 Mod.should.have.property('Game').which.is.a.Object();
+done();
 ```
 
 <a name="emcee-have-method"></a>
 ## Have method
-runGame().
+1. runGame().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-getHint().
+2. getHint().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
 <a name="game"></a>
@@ -187,6 +190,7 @@ Instance created.
 
 ```js
 Mod.should.be.an.instanceOf(Object);
+done();
 ```
 
 <a name="game-have-property"></a>
@@ -195,101 +199,107 @@ id              (String).
 
 ```js
 Mod.should.have.property('id').which.is.a.String();
+done();
 ```
 
 Enemies         (Array).
 
 ```js
 Mod.should.have.property('Enemies').which.is.a.Array();
+done();
 ```
 
 Result          (Object).
 
 ```js
 Mod.should.have.property('Result').which.is.a.Object();
+done();
 ```
 
 Tower           (Object).
 
 ```js
 Mod.should.have.property('Tower').which.is.a.Object();
+done();
 ```
 
 Turn            (Number).
 
 ```js
 Mod.should.have.property('Turn').which.is.a.Number();
+done();
 ```
 
 States          (Object).
 
 ```js
 Mod.should.have.property('States').which.is.a.Object();
+done();
 ```
 
 <a name="game-have-method"></a>
 ## Have method
-setup().
+1. setup().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-nextTurn().
+2. nextTurn().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-playRound().
+3. playRound().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-shot().
+4. shot().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-getEnemies().
+5. getEnemies().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-moveEnemies().
+6. moveEnemies().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-checkState().
+7. checkState().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-notify().
+8. notify().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-logResult().
+9. logResult().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
 <a name="tower"></a>
@@ -298,6 +308,7 @@ Instance created.
 
 ```js
 Mod.should.be.an.instanceOf(Object);
+done();
 ```
 
 <a name="tower-have-property"></a>
@@ -306,27 +317,30 @@ id              (String).
 
 ```js
 Mod.should.have.property('id').which.is.a.String();
+done();
 ```
 
 fireRange       (Number).
 
 ```js
 Mod.should.have.property('fireRange').which.is.a.Number();
+done();
 ```
 
 verbose         (Boolean).
 
 ```js
 Mod.should.have.property('verbose').which.is.a.Boolean().and.is.false();
+done();
 ```
 
 <a name="tower-have-method"></a>
 ## Have method
-notify().
+1. notify().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
 <a name="enemy"></a>
@@ -335,6 +349,7 @@ Instance created.
 
 ```js
 Mod.should.be.an.instanceOf(Object);
+done();
 ```
 
 <a name="enemy-have-property"></a>
@@ -343,44 +358,49 @@ id              (String).
 
 ```js
 Mod.should.have.property('id').which.is.a.String();
+done();
 ```
 
 name            (String).
 
 ```js
 Mod.should.have.property('name').which.is.a.String();
+done();
 ```
 
 distCurrent     (Number).
 
 ```js
 Mod.should.have.property('distCurrent').which.is.a.Number();
+done();
 ```
 
 speed           (Number).
 
 ```js
 Mod.should.have.property('speed').which.is.a.Number();
+done();
 ```
 
 killed          (Boolean).
 
 ```js
 Mod.should.have.property('killed').which.is.a.Boolean().and.is.false();
+done();
 ```
 
 <a name="enemy-have-method"></a>
 ## Have method
-notify().
+1. notify().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
 
-move().
+2. move().
 
 ```js
-Mod.should.have.property(m);
-Mod[m].should.be.Function();
+Mod.should.have.property(m).which.is.a.Function();
+done();
 ```
