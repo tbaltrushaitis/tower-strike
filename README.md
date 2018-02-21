@@ -133,7 +133,6 @@ Here is the list of possible values for the option:
  - tap
  - xunit
 
-
 ---
 
 #### Useful Info ####
