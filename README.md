@@ -98,6 +98,8 @@ $ npm i
 $ nvm exec 0.12.14 npm start
 ```
 
+![Start a game](assets/img/npm-start.png)
+
 #### Development stage ####
 
 ```shell
