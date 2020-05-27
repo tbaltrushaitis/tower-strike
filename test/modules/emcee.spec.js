@@ -1,6 +1,6 @@
 /*!
  * File:    test/modules/emcee.spec.js
- * Copyright (c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017-present Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -8,67 +8,63 @@
 
 (function () {
 
-    /**
-     * DEPENDENCIES
-     * @private
-     */
+  /**
+   * DEPENDENCIES
+   * @private
+   */
 
-    var _       =   require('lodash');
-    var Chance  =   require('chance').Chance(Math.random);
-    var Emcee   =   require('../../modules/emcee');
+  const _      = require('lodash');
+  const Chance = require('chance').Chance(Math.random);
 
-    /**
-     * SETTINGS
-     * @void
-     */
+  const Emcee  = require('../../modules/emcee');
 
-    var lstMethods  =   [
-            'runGame'
-          , 'getHint'
-        ];
-    var mOpts   =   {
-            id: Chance.guid()
-        };
-    var Mod =   new Emcee(mOpts);
+  /**
+   * SETTINGS
+   * @void
+   */
 
-    /**
-     * TESTS
-     * @void
-     */
+  let lstMethods = [
+      'runGame'
+    , 'getHint'
+  ];
+  let mOpts = {
+    // id: Chance.guid()
+  };
+  let Mod = new Emcee(mOpts);
 
-    describe('Emcee', function () {
+  /**
+   * TESTS
+   * @void
+   */
 
-        it('Instance created', function (done) {
-            Mod.should.be.an.instanceOf(Object);
-            done();
-        });
+  describe('Emcee', function () {
 
-        describe('Have property', function () {
-
-            it('id\t\t(String)', function (done) {
-                Mod.should.have.property('id').which.is.a.String();
-                done();
-            });
-
-            it('Game\t\t(Object)', function (done) {
-                Mod.should.have.property('Game').which.is.a.Object();
-                done();
-            });
-
-        });
-
-        describe('Have method', function () {
-
-            _.each(lstMethods, function (m, i) {
-                it(1 + i + '. ' + m + '()', function (done) {
-                    Mod.should.have.property(m).which.is.a.Function();
-                    done();
-                });
-            });
-
-        });
-
+    it('Instantiated', function (done) {
+      Mod.should.be.an.instanceOf(Object);
+      done();
     });
 
-}).call(this);
+    describe('Have property', function () {
+      it('id\t\t(String)', function (done) {
+        Mod.should.have.property('id').which.is.a.String();
+        done();
+      });
 
+      it('Game\t\t(Object)', function (done) {
+        Mod.should.have.property('Game').which.is.a.Object();
+        done();
+      });
+    });
+
+    describe('Have method', function () {
+      _.each(lstMethods, function (m, i) {
+        it(1 + i + '. ' + m + '()', function (done) {
+          Mod.should.have.property(m).which.is.a.Function();
+          done();
+        });
+      });
+    });
+
+  });
+
+}).call(this);

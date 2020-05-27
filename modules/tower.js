@@ -1,7 +1,7 @@
 /*!
  * File:    modules/tower.js
  * Module:  Tower
- * Copyright (c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017-present Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -9,57 +9,56 @@
 
 (function () {
 
-    /**
-     * DEPENDENCIES
-     * @private
-     */
+  /**
+   * DEPENDENCIES
+   * @private
+   */
 
-    var _       =   require('lodash');
-    var Chance  =   require('chance').Chance(Math.random);
+  const _      = require('lodash');
+  const Chance = require('chance').Chance(Math.random);
 
-    /**
-     * CONSTRUCTOR
-     * @void
-     */
+  /**
+   * CONSTRUCTOR
+   * @void
+   */
 
-    var Tower   =   function Tower (opts) {
-        var self    =   this;
-        var defs    =   {
-                id:         Chance.hash()
-              , fireRange:  parseInt('0m')
-              , verbose:    false
-            };
-
-        _.extend(self, true, defs, opts || {});
+  const Tower = function Tower (opts) {
+    let self = this;
+    let defs = {
+        id:        Chance.hash()
+      , fireRange: parseInt('0m')
+      , verbose:   false
     };
 
-    /**
-     * PROTOTYPE
-     * @void
-     */
+    Object.assign(self, defs, opts || {});
+  };
 
-    Tower.prototype             =   Object.create(Object.prototype);
-    Tower.prototype.constructor =   Tower;
+  /**
+   * PROTOTYPE
+   * @void
+   */
 
-    /**
-     * METHODS
-     * @public
-     */
+  Tower.prototype             = Object.create(Object.prototype);
+  Tower.prototype.constructor = Tower;
 
-    //  Notifier
-    Tower.prototype.notify  =   function (sText) {
-        var self    =   this;
-        return (self.verbose
-                    ?   console.log('[' + self.constructor.name + ']:\t' + (sText || 'Firing range is [' + self.fireRange + 'm]'))
-                    :   true);
-    };
+  /**
+   * METHODS
+   * @public
+   */
 
-    /**
-     * EXPORTS
-     * @public
-     */
+  //  Notifier
+  Tower.prototype.notify = function (sText) {
+    let self = this;
+    return (self.verbose
+            ? console.log('[' + self.constructor.name + ']:\t' + (sText || 'Firing range is [' + self.fireRange + 'm]'))
+            : true);
+  };
 
-    module.exports  =   Tower;
+  /**
+   * EXPORTS
+   * @public
+   */
+
+  module.exports = Tower;
 
 }).call(this);
-
