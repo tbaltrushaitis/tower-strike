@@ -1,6 +1,6 @@
 /*!
  * File:    test/modules/game.spec.js
- * Copyright (c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017-present Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -8,94 +8,94 @@
 
 (function () {
 
-    /**
-     * DEPENDENCIES
-     * @private
-     */
+  /**
+   * DEPENDENCIES
+   * @private
+   */
 
-    var _       =   require('lodash');
-    var Chance  =   require('chance').Chance(Math.random);
-    var Game    =   require('../../modules/game');
+  const _      = require('lodash');
+  const Chance = require('chance').Chance(Math.random);
 
-    /**
-     * SETTINGS
-     * @void
-     */
+  const Game   = require('../../modules/game');
 
-    var lstMethods  =   [
-            'setup'
-          , 'nextTurn'
-          , 'playRound'
-          , 'shot'
-          , 'getEnemies'
-          , 'moveEnemies'
-          , 'checkState'
-          , 'notify'
-          , 'logResult'
-        ];
-    var mOpts   =   {
-            id: Chance.guid()
-        };
-    var Mod =   new Game(mOpts);
+  /**
+   * SETTINGS
+   * @void
+   */
 
-    /**
-     * TESTS
-     * @void
-     */
+  let lstMethods = [
+      'setup'
+    , 'nextTurn'
+    , 'playRound'
+    , 'shot'
+    , 'getEnemies'
+    , 'moveEnemies'
+    , 'checkState'
+    , 'notify'
+    , 'logResult'
+  ];
+  let mOpts = {
+    id: Chance.guid()
+  };
+  let Mod = new Game(mOpts);
 
-    describe('Game', function () {
+  /**
+   * TESTS
+   * @void
+   */
 
-        it('Instance created', function (done) {
-            Mod.should.be.an.instanceOf(Object);
-            done();
-        });
+  describe('Game', function () {
 
-        describe('Have property', function () {
+    it('Instantiated', function (done) {
+      Mod.should.be.an.instanceOf(Object);
+      done();
+    });
 
-            it('id\t\t(String)', function (done) {
-                Mod.should.have.property('id').which.is.a.String();
-                done();
-            });
+    describe('Have property', function () {
 
-            it('Enemies\t\t(Array)', function (done) {
-                Mod.should.have.property('Enemies').which.is.a.Array();
-                done();
-            });
+      it('id\t\t(String)', function (done) {
+        Mod.should.have.property('id').which.is.a.String();
+        done();
+      });
 
-            it('Result\t\t(Object)', function (done) {
-                Mod.should.have.property('Result').which.is.a.Object();
-                done();
-            });
+      it('Enemies\t\t(Array)', function (done) {
+        Mod.should.have.property('Enemies').which.is.a.Array();
+        done();
+      });
 
-            it('Tower\t\t(Object)', function (done) {
-                Mod.should.have.property('Tower').which.is.a.Object();
-                done();
-            });
+      it('Result\t\t(Object)', function (done) {
+        Mod.should.have.property('Result').which.is.a.Object();
+        done();
+      });
 
-            it('Turn\t\t(Number)', function (done) {
-                Mod.should.have.property('Turn').which.is.a.Number();
-                done();
-            });
+      it('Tower\t\t(Object)', function (done) {
+        Mod.should.have.property('Tower').which.is.a.Object();
+        done();
+      });
 
-            it('States\t\t(Object)', function (done) {
-                Mod.should.have.property('States').which.is.a.Object();
-                done();
-            });
+      it('Turn\t\t(Number)', function (done) {
+        Mod.should.have.property('Turn').which.is.a.Number();
+        done();
+      });
 
-        });
-
-        describe('Have method', function () {
-
-            _.each(lstMethods, function (m, i) {
-                it(1 + i + '. ' + m + '()', function (done) {
-                    Mod.should.have.property(m).which.is.a.Function();
-                    done();
-                });
-            });
-
-        });
+      it('States\t\t(Object)', function (done) {
+        Mod.should.have.property('States').which.is.a.Object();
+        done();
+      });
 
     });
 
-}).call(this);
+    describe('Have method', function () {
 
+      _.each(lstMethods, function (m, i) {
+        it(1 + i + '. ' + m + '()', function (done) {
+          Mod.should.have.property(m).which.is.a.Function();
+          done();
+        });
+      });
+
+    });
+
+  });
+
+}).call(this);

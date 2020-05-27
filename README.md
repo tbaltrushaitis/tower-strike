@@ -210,4 +210,6 @@ Here is the list of possible values for the option:
 
 ---
 
+> :calendar: Developed on **June 2017**
+
 :scorpius:

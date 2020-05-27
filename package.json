@@ -1,71 +1,72 @@
-{   "name":         "tower-strike"
-  , "title":        "A game where the goal is to kill the enemies by using a tower"
-  , "description":  "Simulate a game where the goal is to kill the enemies by using a tower."
-  , "version":      "0.0.3"
-  , "author": {
-        "name":  "Baltrushaitis Tomas"
-      , "email": "tbaltrushaitis@gmail.com"
-      , "url":   "https://github.com/tbaltrushaitis"
+{
+  "name":        "tower-strike"
+, "title":       "A game where the goal is to kill the enemies by using a tower"
+, "description": "Simulate a game where the goal is to kill the enemies by using a tower."
+, "version":     "0.0.3"
+, "author": {
+    "name":  "Baltrushaitis Tomas"
+  , "email": "tbaltrushaitis@gmail.com"
+  , "url":   "https://github.com/tbaltrushaitis"
+  }
+, "license":  "MIT"
+, "private":  true
+, "homepage": ""
+, "logo":     "https://github.com/tbaltrushaitis/tower-strike/blob/master/logo-tower-strike.png"
+, "website":  ""
+, "readmeFilename": "README.md"
+, "repository": {
+    "type": "git"
+  , "url":  "git+https://github.com/tbaltrushaitis/tower-strike.git"
+  }
+, "engines": {
+    "node": "#0.12.14"
+  , "npm":  "#2.15.1"
+  }
+, "main": "index.js"
+, "bin": {
+    "mocha":  "./node_modules/.bin/mocha"
+  , "_mocha": "./node_modules/.bin/_mocha"
+  }
+, "scripts": {
+    "start": "node index.js"
+  , "dev":   "gulp"
+  , "test":  "mocha"
+  }
+, "keywords": [
+    "game"
+  , "tower"
+  , "simulator"
+  ]
+, "dependencies": {
+    "chance":  "^1.0.18"
+  , "config":  "^3.1.0"
+  , "expect":  "^1.20.2"
+  , "lodash":  "^4.17.11"
+  , "mocha":   "^6.1.4"
+  , "should":  "^13.2.3"
+  , "winston": "^3.2.1"
+  }
+, "devDependencies": {
+    "gulp":           "3.9.1"
+  , "gulp-exec":      "^3.0.2"
+  , "gulp-jscs":      "^4.1.0"
+  , "gulp-jshint":    "^2.1.0"
+  , "gulp-sequence":  "^1.0.0"
+  , "jshint":         "^2.10.2"
+  , "jshint-stylish": "^2.2.1"
+  }
+, "disbledDependencies": {
+  }
+, "options": {
+    "dataSource":   {
+      "defaults":  {
+        "file": "input-lost-001.txt"
+      , "path": "data"
+      }
+    , "params": {
+        "encoding": "utf8"
+      , "flag":     "r"
+      }
     }
-  , "license":  "MIT"
-  , "private":  true
-  , "homepage": ""
-  , "logo":     "https://github.com/tbaltrushaitis/tower-strike/blob/master/logo-tower-strike.png"
-  , "website":  ""
-  , "readmeFilename":   "README.md"
-  , "repository": {
-        "type": "git"
-      , "url":  "git+https://github.com/tbaltrushaitis/tower-strike.git"
-    }
-  , "engines": {
-        "node": "#0.12.14"
-      , "npm":  "#2.15.1"
-    }
-  , "main":     "index.js"
-  , "bin": {
-        "mocha":    "./node_modules/.bin/mocha"
-      , "_mocha":   "./node_modules/.bin/_mocha"
-    }
-  , "scripts": {
-        "start":    "node index.js"
-      , "dev":      "gulp"
-      , "test":     "mocha"
-    }
-  , "keywords": [
-        "game"
-      , "tower"
-      , "simulator"
-    ]
-  , "dependencies": {
-        "chance":   "^1.0.9"
-      , "config":   "^1.26.1"
-      , "lodash":   "^4.17.4"
-      , "mocha":    "^3.4.2"
-      , "should":   "^11.2.1"
-      , "winston":  "^2.3.1"
-    }
-  , "devDependencies": {
-        "gulp":             "^3.9.1"
-      , "gulp-exec":        "^2.1.3"
-      , "gulp-jscs":        "^4.0.0"
-      , "gulp-jshint":      "^2.0.4"
-      , "gulp-sequence":    "^0.4.6"
-      , "jshint":           "^2.9.4"
-      , "jshint-stylish":   "^2.2.1"
-    }
-  , "disbledDependencies": {
-        "expect":   "^1.20.2"
-    }
-  , "options":  {
-        "dataSource":   {
-            "defaults":  {
-                "file": "input-lost-001.txt"
-              , "path": "data"
-            }
-          , "params": {
-                "encoding": "utf8"
-              , "flag":     "r"
-            }
-        }
-    }
+  }
 }

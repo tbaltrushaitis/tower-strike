@@ -1,7 +1,7 @@
 /*!
  * File:    modules/unit.js
  * Module:  Unit
- * Copyright (c) 2017 Baltrushaitis Tomas
+ * Copyright (c) 2017-present Baltrushaitis Tomas
  * MIT Licensed
  */
 
@@ -9,75 +9,85 @@
 
 (function () {
 
-    /**
-     * DEPENDENCIES
-     * @private
-     */
+  /**
+   * DEPENDENCIES
+   * @private
+   */
 
-    var _       =   require('lodash');
-    var Chance  =   require('chance').Chance(Math.random);
+  const _      = require('lodash');
+  const Chance = require('chance').Chance(Math.random);
 
-    /**
-     * CONSTRUCTOR
-     * @void
-     */
+  /**
+   * CONSTRUCTOR
+   * @void
+   */
 
-    var Unit    =   function Unit (opts) {
-        var self    =   this;
-        var defs    =   {
-                id:             Chance.hash()
-              , name:           'Bot-' + Chance.first()
-              , distCurrent:    0
-              , speed:          0
-              , killed:         false
-            };
-
-        _.extend(self, true, defs, opts || {});
+  const Unit = function Unit (opts) {
+    let self = this;
+    let defs = {
+        id:          Chance.hash()
+      , name:        'Bot-' + Chance.first()
+      , distCurrent: 0
+      , speed:       0
+      , killed:      false
     };
 
-    /**
-     * PROTOTYPE
-     * @void
-     */
+    Object.assign(self, defs, opts || {});
+  };
 
-    Unit.prototype              =   Object.create(Object.prototype);
-    Unit.prototype.constructor  =   Unit;
+  /**
+   * PROTOTYPE
+   * @void
+   */
 
-    /**
-     * METHODS
-     * @public
-     */
+  Unit.prototype             = Object.create(Object.prototype);
+  Unit.prototype.constructor = Unit;
 
-    //  Move
-    Unit.prototype.move =   function () {
-        var self    =   this;
-        if (!self.killed) {
-            var currentDist =   self.distCurrent;
-            var newDist =   Math.max(0, currentDist - self.speed);
-            self.distCurrent    =   newDist;
-            if (currentDist !== newDist) {
-                var Msg =   'Move ' + self.speed + 'm ' + '[' + currentDist + 'm' + ' --> ' + newDist + 'm' + ']';
-                self.notify(Msg);
-            }
-        }
+  /**
+   * METHODS
+   * @public
+   */
 
-        return self;
-    };
+  //  Move
+  Unit.prototype.move = function () {
+    let self = this;
+    if (!self.killed) {
+      let currentDist = self.distCurrent;
+      let newDist = Math.max(0, currentDist - self.speed);
+      self.distCurrent = newDist;
+      if (currentDist !== newDist) {
+        let Msg = 'Move ' + self.speed + 'm ' + '[' + currentDist + 'm' + ' --> ' + newDist + 'm' + ']';
+        self.notify(Msg);
+      }
+    }
 
-    //  Notifier
-    Unit.prototype.notify   =   function (sText) {
-        var self    =   this;
-        return (self.verbose
-                    ?   console.log('\t[' + self.name + ']' + ':\t', (sText || 'Distance: ' + self.distCurrent + 'm; Speed: ' + self.speed + 'm; ' + (self.killed ? 'DEAD' : 'ALIVE')))
-                    :   true);
-    };
+    return self;
+  };
 
-    /**
-     * EXPORTS
-     * @public
-     */
+  //  Notifier
+  Unit.prototype.notify = function (sText) {
+    let self = this;
+    return (self.verbose
+      ? console.log(
+        '\t['
+        + self.name + ']'
+        + ':\t'
+        , (sText || 'Distance: '
+          + self.distCurrent
+          + 'm; Speed: '
+          + self.speed
+          + 'm; '
+          + (self.killed ? 'DEAD' : 'ALIVE'))
+        )
+      : true
+    );
+  };
 
-    module.exports  =   Unit;
+  /**
+   * EXPORTS
+   * @public
+   */
+
+  module.exports = Unit;
 
 }).call(this);
-
